@@ -1,0 +1,40 @@
+{
+  "name": "expresstodo",
+  "version": "1.0.0",
+  "description": "expressjs todo list as rest api",
+  "main": "index.js",
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development webpack --watch --mode=development",
+    "production": "cross-env NODE_ENV=producttion webpack --progress -p --mode=production"
+  },
+  "keywords": [
+    "express",
+    "js",
+    "todo",
+    "list",
+    "rest",
+    "api"
+  ],
+  "author": "vidyhermes",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-validator": "^5.2.0",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "compression-webpack-plugin": "^1.1.11",
+    "mysql-migrations": "^1.0.6",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  }
+}
