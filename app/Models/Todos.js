@@ -13,7 +13,7 @@ class Todos extends Model {
   }
 
   getDone(done) {
-    return done ? "true" : false
+    return done ? true : false
   }
 
 }
