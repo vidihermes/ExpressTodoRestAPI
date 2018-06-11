@@ -16,3 +16,10 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+Route.group(() => {
+  Route.get('/', 'TodoController.index')
+  Route.get('/:id', 'TodoController.show')
+  Route.post('create', 'TodoController.create')
+  Route.patch('done/:id', 'TodoController.done')
+  Route.delete('delete/:id', 'TodoController.delete')
+}).prefix('todo')
