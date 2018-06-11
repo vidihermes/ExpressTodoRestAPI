@@ -27,8 +27,7 @@ module.exports = {
     | }
     |
     */
-    directives: {
-    },
+    directives   : {},
     /*
     |--------------------------------------------------------------------------
     | Report only
@@ -38,7 +37,7 @@ module.exports = {
     | instead report them to a URL.
     |
     */
-    reportOnly: false,
+    reportOnly   : false,
     /*
     |--------------------------------------------------------------------------
     | Set all headers
@@ -79,7 +78,7 @@ module.exports = {
   |
   */
   xss: {
-    enabled: true,
+    enabled      : true,
     enableOnOldIE: false
   },
 
@@ -132,14 +131,14 @@ module.exports = {
   |
   */
   csrf: {
-    enable: true,
-    methods: ['POST', 'PUT', 'DELETE'],
-    filterUris: [],
+    enable       : process.env.NODE_ENV === 'testing' ? false : true,
+    methods      : ['POST', 'PUT', 'DELETE', 'PATCH'],
+    filterUris   : [],
     cookieOptions: {
       httpOnly: false,
       sameSite: true,
-      path: '/',
-      maxAge: 7200
+      path    : '/',
+      maxAge  : 7200
     }
   }
 }

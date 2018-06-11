@@ -15,8 +15,12 @@ class TodoController {
                      .json({message: 'success', status: 200, data: todos})
     }
     catch (exception) {
+      if (exception.code == 'E_MISSING_DATABASE_ROW') {
+        return response.status(404)
+                       .json({message: 'data does not exists', status: 404})
+      }
       return response.status(404)
-                     .json({message: 'data does not exists', status: 404})
+                     .json({message: 'unknown exception caught', status: 404})
     }
   }
 
@@ -26,8 +30,12 @@ class TodoController {
       return response.status(200)
                      .json({message: 'success', status: 200, data: todo})
     } catch (exception) {
+      if (exception.code == 'E_MISSING_DATABASE_ROW') {
+        return response.status(404)
+                       .json({message: 'data does not exists', status: 404})
+      }
       return response.status(404)
-                     .json({message: 'data does not exists', status: 404})
+                     .json({message: 'unknown exception caught', status: 404})
     }
   }
 
@@ -55,8 +63,12 @@ class TodoController {
       return response.status(200)
                      .json({message: 'success', status: 200})
     } catch (exception) {
+      if (exception.code == 'E_MISSING_DATABASE_ROW') {
+        return response.status(404)
+                       .json({message: 'data does not exists', status: 404})
+      }
       return response.status(404)
-                     .json({message: 'data does not exists', status: 404})
+                     .json({message: 'unknown exception caught', status: 404})
     }
   }
 
@@ -67,8 +79,12 @@ class TodoController {
       return response.status(200)
                      .json({message: 'success', status: 200})
     } catch (exception) {
+      if (exception.code == 'E_MISSING_DATABASE_ROW') {
+        return response.status(404)
+                       .json({message: 'data does not exists', status: 404})
+      }
       return response.status(404)
-                     .json({message: 'data does not exists', status: 404})
+                     .json({message: 'unknown exception caught', status: 404})
     }
   }
 

@@ -20,6 +20,6 @@ Route.group(() => {
   Route.get('/', 'TodoController.index')
   Route.get('/:id', 'TodoController.show')
   Route.post('create', 'TodoController.create')
-  Route.get('done/:id', 'TodoController.done')
-  Route.get('delete/:id', 'TodoController.delete')
+  Route.patch('done/:id', 'TodoController.done')
+  Route.delete('delete/:id', 'TodoController.delete')
 }).prefix('todo')
